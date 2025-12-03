@@ -6,11 +6,19 @@
 	},
 	"routes": [
 		{
-			"src": "/(.*\\.(css|js|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot))$",
+			"src": "/(.*\\.(css|js|jpg|jpeg|png|gif|ico|svg|woff|woff2|ttf|eot|mp4))$",
 			"headers": {
 				"Cache-Control": "public, max-age=31536000, immutable"
 			},
 			"dest": "/$1"
+		},
+		{
+			"src": "^/mobile/(.*)",
+			"dest": "/mobile/$1"
+		},
+		{
+			"src": "^/desktop/(.*)",
+			"dest": "/desktop/$1"
 		},
 		{
 			"src": "/(.*)",
