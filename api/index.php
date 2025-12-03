@@ -6,7 +6,7 @@
 	} else {
 		$sub_path = 'desktop';
 	}
-	$res = file_get_contents($sub_path . '/index.html');
+	$res = file_get_contents('/' . $sub_path . '/index.html');
 	$res = str_replace('css/', $sub_path . '/css/', $res);
 	$res = str_replace('js/', $sub_path . '/js/', $res);
 	$res = str_replace('imgs/', $sub_path . '/imgs/', $res);
