@@ -1,14 +1,14 @@
 {
 	"builds": [
 		{
-			"src": "*.php",
+			"src": "/*",
 			"use": "@vercel/static-build"
 		}
 	],
 	"routes": [
 		{
 			"src": "/(.*)",
-			"dest": "/index.php"
+			"dest": "/$1"
 		}
 	]
 }
