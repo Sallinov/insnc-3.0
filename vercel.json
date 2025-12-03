@@ -2,15 +2,16 @@
   "version": 2,
   "builds": [
     {
-      "src": "**/*.php",
-      "use": "vercel-php@0.0.3"
+      "src": "**/*.php"
     }
   ],
   "routes": [
     {
       "src": "/(.*)\\.php$",
       "dest": "/$1.php",
-      "headers": { "Content-Type": "text/html" }
+      "headers": {
+        "Content-Type": "text/html"
+      }
     },
     {
       "src": "/(.*)",
